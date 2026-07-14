@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="style.css">
   <style>
     .timeline { position: relative; border-left: 2px solid var(--accent-cyan); margin-left: 1rem; padding-left: 2rem; }
-    .timeline-item { position: relative; margin-bottom: 3rem; }
+    .timeline-item { position: relative; margin-bottom: 3.5rem; }
     .timeline-item::before {
       content: '';
       position: absolute;
@@ -19,11 +19,49 @@
       background: var(--gradient-primary);
       border: 3px solid var(--bg-main);
     }
-    .timeline-date { font-size: 0.85rem; color: var(--accent-cyan); font-weight: 600; text-transform: uppercase; margin-bottom: 0.4rem; }
-    .timeline-title { font-size: 1.4rem; color: #fff; margin-bottom: 0.2rem; }
-    .timeline-org { font-size: 1rem; color: var(--text-muted); font-weight: 600; margin-bottom: 1rem; }
+    
+    /* --- NEW LOGO & HEADER STYLING --- */
+    .timeline-header {
+      display: flex;
+      align-items: flex-start;
+      gap: 1.2rem;
+      margin-bottom: 1rem;
+    }
+    
+    .org-logo-container {
+      width: 56px;
+      height: 56px;
+      min-width: 56px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+    
+    .org-logo {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      border-radius: 6px;
+    }
+    /* --------------------------------- */
+
+    .timeline-date { font-size: 0.85rem; color: var(--accent-cyan); font-weight: 600; text-transform: uppercase; margin-bottom: 0.3rem; }
+    .timeline-title { font-size: 1.4rem; color: #fff; margin-bottom: 0.2rem; line-height: 1.2; }
+    .timeline-org { font-size: 1rem; color: var(--text-muted); font-weight: 600; }
     .timeline-list { list-style: disc; padding-left: 1.2rem; color: var(--text-muted); line-height: 1.7; }
     .timeline-list li { margin-bottom: 0.5rem; }
+
+    @media (max-width: 600px) {
+      .timeline-header { gap: 0.8rem; }
+      .org-logo-container { width: 46px; height: 46px; min-width: 46px; }
+      .timeline-title { font-size: 1.2rem; }
+    }
   </style>
 </head>
 <body>
@@ -46,10 +84,19 @@
 
     <h2 style="color:#fff; margin-bottom: 2rem; font-size: 1.8rem;">Work Experience</h2>
     <div class="timeline">
+      <!-- Item 1: MoITT -->
       <div class="timeline-item">
-        <div class="timeline-date">July 2026 – Present</div>
-        <h3 class="timeline-title">Data Analyst Intern</h3>
-        <div class="timeline-org">Ministry of Information Technology & Telecommunication (MoITT), Government of Pakistan</div>
+        <div class="timeline-header">
+          <div class="org-logo-container">
+            <!-- ADD YOUR MoITT LOGO PICTURE FILENAME HERE (e.g., moitt.png) -->
+            <img src="moitt.png" alt="MoITT Logo" class="org-logo" onerror="this.src='https://via.placeholder.com/60/1e293b/38bdf8?text=MoITT'">
+          </div>
+          <div class="timeline-title-group">
+            <div class="timeline-date">July 2026 – Present</div>
+            <h3 class="timeline-title">Data Analyst Intern</h3>
+            <div class="timeline-org">Ministry of Information Technology & Telecommunication (MoITT), Government of Pakistan</div>
+          </div>
+        </div>
         <ul class="timeline-list">
           <li>Working directly under the guidance of the Additional Secretary and Member (Digital & Emerging Technologies) on national research initiatives.</li>
           <li>Conducting data-driven research on digital transformation, emerging technologies, and future workforce skill requirements across the public sector.</li>
@@ -58,10 +105,19 @@
         </ul>
       </div>
 
+      <!-- Item 2: IWMB -->
       <div class="timeline-item">
-        <div class="timeline-date">March 2025 – April 2025</div>
-        <h3 class="timeline-title">Conservation Volunteer</h3>
-        <div class="timeline-org">Islamabad Wildlife Management Board (IWMB)</div>
+        <div class="timeline-header">
+          <div class="org-logo-container">
+            <!-- ADD YOUR IWMB LOGO PICTURE FILENAME HERE (e.g., iwmb.png) -->
+            <img src="iwmb.png" alt="IWMB Logo" class="org-logo" onerror="this.src='https://via.placeholder.com/60/1e293b/38bdf8?text=IWMB'">
+          </div>
+          <div class="timeline-title-group">
+            <div class="timeline-date">March 2025 – April 2025</div>
+            <h3 class="timeline-title">Conservation Volunteer</h3>
+            <div class="timeline-org">Islamabad Wildlife Management Board (IWMB)</div>
+          </div>
+        </div>
         <ul class="timeline-list">
           <li>Volunteered on environmental preservation initiatives across the Margalla Hills National Park.</li>
           <li>Organized and executed community clean-up drives, plantation campaigns, and public awareness programs on wildlife conservation.</li>
@@ -71,28 +127,55 @@
 
     <h2 style="color:#fff; margin: 3rem 0 2rem; font-size: 1.8rem;">Academic Background</h2>
     <div class="timeline" style="border-color: var(--accent-purple);">
+      <!-- Item 3: FAST NUCES -->
       <div class="timeline-item">
-        <div class="timeline-date">2023 – 2027 (Expected)</div>
-        <h3 class="timeline-title">Bachelor of Science in Data Science</h3>
-        <div class="timeline-org">National University of Computer and Emerging Sciences (FAST NUCES), Islamabad</div>
+        <div class="timeline-header">
+          <div class="org-logo-container">
+            <!-- ADD YOUR FAST NUCES LOGO PICTURE FILENAME HERE (e.g., fast-nuces.png) -->
+            <img src="fast.png" alt="FAST NUCES Logo" class="org-logo" onerror="this.src='https://via.placeholder.com/60/1e293b/c084fc?text=FAST'">
+          </div>
+          <div class="timeline-title-group">
+            <div class="timeline-date">2023 – 2027 (Expected)</div>
+            <h3 class="timeline-title">Bachelor of Science in Data Science</h3>
+            <div class="timeline-org">National University of Computer and Emerging Sciences (FAST NUCES), Islamabad</div>
+          </div>
+        </div>
         <ul class="timeline-list">
           <li>Currently in 6th Semester (3rd Year). Rigorous curriculum covering core DSA, DBMS, Advanced Statistics, Data Warehousing, and Machine Learning.</li>
         </ul>
       </div>
 
+      <!-- Item 4: Rashid Minhas College -->
       <div class="timeline-item">
-        <div class="timeline-date">August 2022 – May 2023</div>
-        <h3 class="timeline-title">FSC Pre-Engineering</h3>
-        <div class="timeline-org">Rashid Minhas College Alipur</div>
+        <div class="timeline-header">
+          <div class="org-logo-container">
+            <!-- ADD YOUR RASHID MINHAS COLLEGE LOGO PICTURE FILENAME HERE (e.g., rmc.png) -->
+            <img src="rmc.png" alt="Rashid Minhas College Logo" class="org-logo" onerror="this.src='https://via.placeholder.com/60/1e293b/c084fc?text=RMC'">
+          </div>
+          <div class="timeline-title-group">
+            <div class="timeline-date">August 2022 – May 2023</div>
+            <h3 class="timeline-title">FSC Pre-Engineering</h3>
+            <div class="timeline-org">Rashid Minhas College Alipur</div>
+          </div>
+        </div>
         <ul class="timeline-list">
           <li>Secured 93% Aggregate (1023 / 1100). Strong focus on Mathematics, Physics, and Chemistry.</li>
         </ul>
       </div>
 
+      <!-- Item 5: Asif Saleem College -->
       <div class="timeline-item">
-        <div class="timeline-date">January 2021 – January 2022</div>
-        <h3 class="timeline-title">Matriculation in Science</h3>
-        <div class="timeline-org">Asif Saleem College Alipur</div>
+        <div class="timeline-header">
+          <div class="org-logo-container">
+            <!-- ADD YOUR ASIF SALEEM COLLEGE LOGO PICTURE FILENAME HERE (e.g., asc.png) -->
+            <img src="rmc.png" alt="Asif Saleem College Logo" class="org-logo" onerror="this.src='https://via.placeholder.com/60/1e293b/c084fc?text=ASC'">
+          </div>
+          <div class="timeline-title-group">
+            <div class="timeline-date">January 2021 – January 2022</div>
+            <h3 class="timeline-title">Matriculation in Science</h3>
+            <div class="timeline-org">Asif Saleem College Alipur</div>
+          </div>
+        </div>
         <ul class="timeline-list">
           <li>Achieved Perfect Score: 100% (1100 / 1100). Awarded academic distinction.</li>
         </ul>
