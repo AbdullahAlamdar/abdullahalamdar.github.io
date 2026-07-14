@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | M. Abdullah Alamdar</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .contact-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: start;
+    }
+    .contact-info h3 { font-size: 1.5rem; margin-bottom: 1rem; color: #fff; }
+    .contact-info p { color: var(--text-muted); line-height: 1.8; margin-bottom: 2rem; }
+    .info-box { background: rgba(255,255,255,0.02); padding: 1.2rem; border-radius: 12px; border: 1px solid var(--border-color); margin-bottom: 1rem; }
+    .info-box span { display: block; font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; }
+    .info-box strong { color: var(--accent-cyan); font-size: 1.1rem; }
+    .form-group { margin-bottom: 1.5rem; }
+    .form-group label { display: block; margin-bottom: 0.5rem; font-size: 0.9rem; color: #fff; }
+    .form-control {
+      width: 100%;
+      padding: 0.9rem 1.2rem;
+      background: rgba(0, 0, 0, 0.4);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      color: #fff;
+      font-size: 1rem;
+      transition: border-color 0.3s ease;
+    }
+    .form-control:focus { outline: none; border-color: var(--accent-cyan); }
+    textarea.form-control { resize: vertical; min-height: 140px; }
+    @media (max-width: 768px) { .contact-container { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="logo">M. Abdullah Alamdar</a>
+    <ul class="nav-links">
+      <li><a href="index.html">About</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="experience.html">Experience</a></li>
+      <li><a href="socials.html">Content & Links</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h1 class="page-title">Get In Touch</h1>
+    <p class="page-subtitle">Have a project, collaborative research idea, or job opportunity? Let's talk.</p>
+
+    <div class="contact-container">
+      <div class="contact-info">
+        <h3>Let's Collaborate</h3>
+        <p>I am open to internships, data science consulting, and collaborative software projects. Feel free to reach out via email or fill out the form.</p>
+        
+        <div class="info-box">
+          <span>Primary Email</span>
+          <strong>abdullahalamdar73@gmail.com</strong>
+        </div>
+        <div class="info-box">
+          <span>Secondary Email</span>
+          <strong>abdullah822004786@gmail.com</strong>
+        </div>
+        <div class="info-box">
+          <span>Location</span>
+          <strong>Islamabad, Pakistan</strong>
+        </div>
+      </div>
+
+      <form class="card" action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+        
+        <div class="form-group">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" name="name" class="form-control" placeholder="John Doe" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" class="form-control" placeholder="john@example.com" required>
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" class="form-control" placeholder="How can we work together?" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 M. Abdullah Alamdar. Built with HTML, CSS & JS.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

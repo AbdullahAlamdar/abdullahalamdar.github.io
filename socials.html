@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Content & Socials | M. Abdullah Alamdar</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .links-container {
+      max-width: 650px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+    }
+    .social-card {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.5rem 2rem;
+      text-decoration: none;
+      color: #fff;
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      transition: all 0.3s ease;
+    }
+    .social-card:hover {
+      transform: scale(1.03);
+      background: rgba(255, 255, 255, 0.08);
+      border-color: var(--accent-cyan);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    }
+    .social-info h3 { font-size: 1.2rem; margin-bottom: 0.2rem; }
+    .social-info p { color: var(--text-muted); font-size: 0.9rem; }
+    .arrow-icon { font-size: 1.5rem; color: var(--accent-cyan); transition: transform 0.3s ease; }
+    .social-card:hover .arrow-icon { transform: translateX(5px); color: var(--accent-purple); }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="logo">M. Abdullah Alamdar</a>
+    <ul class="nav-links">
+      <li><a href="index.html">About</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="experience.html">Experience</a></li>
+      <li><a href="socials.html">Content & Links</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h1 class="page-title" style="text-align: center;">Connect Across Platforms</h1>
+    <p class="page-subtitle" style="text-align: center;">Follow my work in data science, digital entrepreneurship, and software engineering.</p>
+
+    <div class="links-container">
+      <a href="https://www.linkedin.com/in/abdullah-alamdar-ba3419369" target="_blank" class="social-card">
+        <div class="social-info">
+          <h3>LinkedIn Profile</h3>
+          <p>Professional network, research updates & career timeline</p>
+        </div>
+        <span class="arrow-icon">&rarr;</span>
+      </a>
+
+      <a href="https://github.com" target="_blank" class="social-card">
+        <div class="social-info">
+          <h3>GitHub Repository</h3>
+          <p>Explore source code for my ML, C++, and C# projects</p>
+        </div>
+        <span class="arrow-icon">&rarr;</span>
+      </a>
+
+      <a href="mailto:abdullahalamdar73@gmail.com" class="social-card">
+        <div class="social-info">
+          <h3>Direct Email</h3>
+          <p>abdullahalamdar73@gmail.com</p>
+        </div>
+        <span class="arrow-icon">&rarr;</span>
+      </a>
+
+      </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 M. Abdullah Alamdar. Built with HTML, CSS & JS.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

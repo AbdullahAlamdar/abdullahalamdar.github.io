@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects | M. Abdullah Alamdar</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+    }
+    .project-card {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      padding: 0;
+      overflow: hidden;
+    }
+    .project-img-container {
+      width: 100%;
+      height: 200px;
+      background: rgba(255, 255, 255, 0.05);
+      overflow: hidden;
+      border-bottom: 1px solid var(--border-color);
+    }
+    .project-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+    .project-card:hover .project-img { transform: scale(1.05); }
+    .project-content { padding: 1.8rem; display: flex; flex-direction: column; flex: 1; }
+    .project-content h3 { font-size: 1.4rem; margin-bottom: 0.8rem; color: #fff; }
+    .project-content p { color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.5rem; flex: 1; }
+    .project-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.5rem; }
+    .project-tag { font-size: 0.75rem; background: rgba(192, 132, 252, 0.15); color: var(--accent-purple); padding: 0.3rem 0.7rem; border-radius: 4px; font-weight: 600; }
+    .project-links { display: flex; gap: 1rem; }
+    .btn-small { padding: 0.6rem 1.2rem; font-size: 0.85rem; }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="logo">M. Abdullah Alamdar</a>
+    <ul class="nav-links">
+      <li><a href="index.html">About</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="experience.html">Experience</a></li>
+      <li><a href="socials.html">Content & Links</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h1 class="page-title">Featured Projects</h1>
+    <p class="page-subtitle">A showcase of machine learning models, statistical forecasting, desktop systems, and graphics engines.</p>
+
+    <div class="projects-grid">
+      <div class="card project-card">
+        <div class="project-img-container">
+          <img src="project1.jpg" alt="Customer Behavior Analysis" class="project-img" onerror="this.src='https://via.placeholder.com/600x400/1e293b/38bdf8?text=ML+Regression+Model'">
+        </div>
+        <div class="project-content">
+          <h3>Customer Behavior Analysis & Regression</h3>
+          <div class="project-tags">
+            <span class="project-tag">Python</span>
+            <span class="project-tag">Linear Regression</span>
+            <span class="project-tag">K-Means Clustering</span>
+          </div>
+          <p>An Intro to Data Science project analyzing and predicting customer purchasing behavior in retail electronics. Implemented supervised and unsupervised models including Linear Regression, Decision Trees, and K-Means Clustering.</p>
+          <div class="project-links">
+            <a href="#" target="_blank" class="btn btn-primary btn-small">View Code / Project Link</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card project-card">
+        <div class="project-img-container">
+          <img src="project2.jpg" alt="USA Inflation Forecasting" class="project-img" onerror="this.src='https://via.placeholder.com/600x400/1e293b/c084fc?text=USA+Inflation+ARIMA+Model'">
+        </div>
+        <div class="project-content">
+          <h3>Forecasting U.S. Inflation (ARIMA, SVM, RF)</h3>
+          <div class="project-tags">
+            <span class="project-tag">R / RStudio</span>
+            <span class="project-tag">Time Series (ARIMA)</span>
+            <span class="project-tag">Support Vector Machines</span>
+          </div>
+          <p>Advanced statistical modeling of U.S. macroeconomic indicators (Inflation, GDP, Unemployment, Interest Rates). Formulated hybrid predictive pipelines combining ARIMA time-series forecasting with Support Vector Machines and Random Forests.</p>
+          <div class="project-links">
+            <a href="#" target="_blank" class="btn btn-primary btn-small">View Code / Project Link</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card project-card">
+        <div class="project-img-container">
+          <img src="project3.jpg" alt="Brick Breaker Game" class="project-img" onerror="this.src='https://via.placeholder.com/600x400/1e293b/38bdf8?text=OpenGL+Brick+Breaker'">
+        </div>
+        <div class="project-content">
+          <h3>Brick Breaker Engine (C++ & OpenGL)</h3>
+          <div class="project-tags">
+            <span class="project-tag">C++</span>
+            <span class="project-tag">OpenGL / GLUT</span>
+            <span class="project-tag">Real-Time Graphics</span>
+          </div>
+          <p>Designed a cross-platform arcade game engine built from scratch using C++ and the OpenGL Utility Toolkit. Implements real-time collision mathematics, paddle-ball physics, dynamic difficulty scaling, and keyboard state handling.</p>
+          <div class="project-links">
+            <a href="#" target="_blank" class="btn btn-primary btn-small">View Code / Project Link</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card project-card">
+        <div class="project-img-container">
+          <img src="project4.jpg" alt="NaSCon Event Management App" class="project-img" onerror="this.src='https://via.placeholder.com/600x400/1e293b/c084fc?text=NaSCon+Event+System'">
+        </div>
+        <div class="project-content">
+          <h3>NaSCon Event Management ERP</h3>
+          <div class="project-tags">
+            <span class="project-tag">C# .NET WinForms</span>
+            <span class="project-tag">MySQL Database</span>
+            <span class="project-tag">OOP Architecture</span>
+          </div>
+          <p>A comprehensive desktop ERP built for managing university technical symposiums. Features role-based access control (RBAC) with custom dashboards for Admins, Judges, Sponsors, Participants, and Organizers to handle registrations, scoring, and billing.</p>
+          <div class="project-links">
+            <a href="#" target="_blank" class="btn btn-primary btn-small">View Code / Project Link</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 M. Abdullah Alamdar. Built with HTML, CSS & JS.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
